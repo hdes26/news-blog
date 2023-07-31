@@ -1,4 +1,4 @@
-import { Navbar } from '@/components/Navbar'
+import { Navbar } from '@/components/ui/Navbar'
 import { Suspense } from 'react'
 export default function HomeLayout ({
   children

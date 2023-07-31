@@ -16,7 +16,8 @@ export default function RootLayout ({
 }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} flex flex-row h-full bg-[#23162a]`} suppressHydrationWarning>
+      <body className={`${inter.className} flex flex-row h-full bg-[#23162a]`}>
+        <div className='noise' />
         {children}
       </body>
     </html>
