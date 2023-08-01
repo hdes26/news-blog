@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/ui/Navbar'
 import { Suspense } from 'react'
 export default function HomeLayout ({
   children
@@ -6,10 +7,10 @@ export default function HomeLayout ({
 }) {
   return (
 
-    <div className='flex w-full h-screen' suppressHydrationWarning>
+    <div className='flex flex-col w-full h-screen p-14' suppressHydrationWarning>
 
       <Suspense>
-        <h1>Layout</h1>
+        <Navbar />
       </Suspense>
       {children}
     </div>
