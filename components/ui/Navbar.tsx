@@ -5,12 +5,6 @@ import { useState } from 'react'
 
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false)
-  const Links = [
-    { name: 'About', link: '#about' },
-    { name: 'Blogs', link: '#blogs' },
-    { name: 'Contact', link: '#contact' },
-    { name: 'Projects', link: '#projects' }
-  ]
   const navBarCloseImg = navbar
     ? (<Image src='/close.svg' width={30} height={30} alt='logo' />)
     : (<Image src='/hamburger-menu.svg' width={30} height={30} alt='logo' className='focus:border-none active:border-none' />)
@@ -42,19 +36,7 @@ export const Navbar = () => {
         <div>
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navBarClosePhoneMenu}`}
-          >
-            <ul className='h-screen md:h-auto items-center justify-center md:flex '>
-              {
-                Links.map((link) => (
-                  <li key={link.name} className='flex text-sm text-white text-center border-b-2 md:border-b-0 cursor-pointer hover:scale-[110%] transition duration-75 border-purple-900  md:hover:text-indigo-500 md:hover:bg-transparent'>
-                    <Link onClick={handleNavbar} href={link.link} className='w-full h-full py-2 md:px-6'>
-                      {link.name}
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
+          />
         </div>
       </div>
     </nav>
